@@ -1,0 +1,39 @@
+# n-1
+# Sample variance vector is var(x)
+# correlation between numeric vactors x and y is cor(x,y)
+# Sum of each value times probability
+# Sum of squared value times porbability
+# 
+
+Q8 = c(7,4,8)
+mean(Q8)
+# sample variance
+Q9 = c(5,8,0)
+var(Q9)
+Q10 = c(2,4,5)
+sd(Q10)
+# sample covariance
+Q11x = c(0,1,2)
+Q11y = c(1,0,0)
+cov(Q11x,Q11y)
+-4/4
+# SMAPLE CORRELATION
+Q13x = c(5,8,6)
+Q13y = c(5,5,2)
+cor(Q13x,Q13y)
+Q14x = c(1,3)
+Q14p = rep(1/2,2)
+sum(Q14x*Q14p)
+sum(Q14x^2*Q14p)
+Q16x = c(0,3,3)
+Q16p = rep(1/3,3)
+sum(Q16x*Q16p)
+sum(Q16x^2*Q16p)
+Q18x = c(10,10)
+Q18p = c(1/10,(10-1)/10)
+sum(Q18x*Q18p)
+sum(Q18x^2*Q18p)
+Q20x = c(8,5,7)
+Q20p = c(0.2,0.5,0.3)
+sum(Q20x*Q20p)
+sum(Q20x^2*Q20p)
