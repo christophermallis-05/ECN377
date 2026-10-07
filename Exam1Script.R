@@ -248,7 +248,6 @@ E_X <- 3
 a <- 3
 b <- 5
 q8_ans <- a * E_X + b
-cat("Q8 Answer:", round(q8_ans, 2), "\n")
 
 # Question 9: Expectation of sum E[aX + bY] = a*E[X] + b*E[Y]
 # E[X] = 7, E[Y] = 1, a = 1, b = 3
@@ -257,7 +256,6 @@ E_Y <- 1
 a <- 1
 b <- 3
 q9_ans <- a * E_X + b * E_Y
-cat("Q9 Answer:", round(q9_ans, 2), "\n")
 
 # Question 10: E[aX + bY - c] = a*E[X] + b*E[Y] - c
 # E[X] = 8, E[Y] = 7, a = 4, b = 1, c = 3
@@ -267,34 +265,29 @@ a <- 4
 b <- 1
 c <- 3
 q10_ans <- a * E_X + b * E_Y - c
-cat("Q10 Answer:", round(q10_ans, 2), "\n")
 
 # Question 11: Var(X) = E[X^2] - (E[X])^2
 # E[X] = 1, E[X^2] = 57
 E_X <- 1
 E_X2 <- 57
 q11_ans <- E_X2 - (E_X^2)
-cat("Q11 Answer:", round(q11_ans, 2), "\n")
 
 # Question 12: Var(aX + b) = a^2 * Var(X)
 # Var(X) = 4, a = 2
 Var_X <- 4
 a <- 2
 q12_ans <- (a^2) * Var_X
-cat("Q12 Answer:", round(q12_ans, 2), "\n")
 
 # Question 13: Standard Deviation sd(X) = sqrt(Var(X))
 # Var(X) = 3
 Var_X <- 3
 q13_ans <- sqrt(Var_X)
-cat("Q13 Answer:", round(q13_ans, 2), "\n")
 
 # Question 14: Independent Var(X + Y) = Var(X) + Var(Y)
 # Var(X) = 7, Var(Y) = 4
 Var_X <- 7
 Var_Y <- 4
 q14_ans <- Var_X + Var_Y
-cat("Q14 Answer:", round(q14_ans, 2), "\n")
 
 # Question 15: Cov(X, Y) = E[XY] - E[X]*E[Y]
 # E[XY] = 27, E[X] = 5, E[Y] = 6
@@ -302,7 +295,6 @@ E_XY <- 27
 E_X <- 5
 E_Y <- 6
 q15_ans <- E_XY - (E_X * E_Y)
-cat("Q15 Answer:", round(q15_ans, 2), "\n")
 
 # Question 16: Discrete Covariance from paired observations
 # Paired values: (2,2), (3,1), (1,3), each prob = 1/3
@@ -312,7 +304,6 @@ E_XY <- mean(X * Y)
 E_X <- mean(X)
 E_Y <- mean(Y)
 q16_ans <- E_XY - (E_X * E_Y)
-cat("Q16 Answer:", round(q16_ans, 2), "\n")
 
 # Question 17: Cov(a1*X + b1, a2*Y + b2) = a1*a2*Cov(X, Y)
 # Cov(X, Y) = 0, a1 = 3, a2 = 5
@@ -320,7 +311,6 @@ Cov_XY <- 0
 a1 <- 3
 a2 <- 5
 q17_ans <- a1 * a2 * Cov_XY
-cat("Q17 Answer:", round(q17_ans, 2), "\n")
 
 # Question 18: Cor(X, Y) = Cov(X, Y) / (sd(X) * sd(Y))
 # Cov(X, Y) = 0, sd(X) = 5, sd(Y) = 2
@@ -328,7 +318,6 @@ Cov_XY <- 0
 sd_X <- 5
 sd_Y <- 2
 q18_ans <- Cov_XY / (sd_X * sd_Y)
-cat("Q18 Answer:", round(q18_ans, 2), "\n")
 
 # Question 19: Var(aX + bY) = a^2*Var(X) + b^2*Var(Y) + 2*a*b*Cov(X, Y)
 # Var(X) = 2, Var(Y) = 3, Cov(X, Y) = 3, a = 3, b = 2
@@ -338,20 +327,17 @@ Cov_XY <- 3
 a <- 3
 b <- 2
 q19_ans <- (a^2) * Var_X + (b^2) * Var_Y + 2 * a * b * Cov_XY
-cat("Q19 Answer:", round(q19_ans, 2), "\n")
 
 # Question 20: Subgroup average E[Y | X = x]
 # Y values: 5, 6, 10, 8
 Y_subgroup <- c(5, 6, 10, 8)
 q20_ans <- mean(Y_subgroup)
-cat("Q20 Answer:", round(q20_ans, 2), "\n")
 
 # Question 21: Conditional Expectation discrete distribution
 # Y values: 2, 9, 4 with probabilities 0.2, 0.3, 0.5
 Y_vals <- c(2, 9, 4)
 probs <- c(0.2, 0.3, 0.5)
 q21_ans <- sum(Y_vals * probs)
-cat("Q21 Answer:", round(q21_ans, 2), "\n")
 
 # Question 22: Linear conditional expectation E[aY + b | X = x] = a*E[Y | X = x] + b
 # E[Y | X = x] = 1, a = 3, b = 7
@@ -359,11 +345,8 @@ E_Y_cond <- 1
 a <- 3
 b <- 7
 q22_ans <- a * E_Y_cond + b
-cat("Q22 Answer:", round(q22_ans, 2), "\n")
 
 
-# ==============================================================================
-# Problem Set 5: Econometrics (ECN-377) Solutions
 # ==============================================================================
 
 # In the simple linear regression model Y = beta0 + beta1 * X + U
@@ -410,16 +393,13 @@ beta0_q13 <- 2
 beta1_q13 <- 5 / 10
 x_val_q13 <- 4
 beta0_q13 + beta1_q13 * x_val_q13
-cat("Q13 Answer:", round(q13_ans, 2), "\n") # Expected: 4.00
 
 # ------------------------------------------------------------------------------
-# Question 14
 # Sample: x = (2, 2, 4), y = (9, 2, 5), predict y_hat at x = 8
 x14 <- c(2, 2, 4)
 y14 <- c(9, 2, 5)
 fit14 = lm(y14 ~ x14)
 predict(fit14, newdata = data.frame(x14 = 8)) # at x=8, take 2nd line number
-cat("Q14 Answer:", round(q14_ans, 2), "\n") # Expected: 4.00
 
 # Equation: E[colGPA | hsGPA] = (11/10) + (3/10) * hsGPA, at hsGPA = 21/10
 hsGPA <- 21 / 10
@@ -473,6 +453,8 @@ x = c(1,4,5,8)
 y = c(10,2,6,3)
 cor(x,y)
 
+
+# PSNEW
 # The sample covariance between annual income (in dollars) and years of education 
 # is 7,800, and their sample correlation is 0.24. If income is measured in 
 # thousands of dollars instead, what is the sample correlation between income 
@@ -539,9 +521,7 @@ var_2X_minus_2Y <- (2^2 * var_X) + ((-2)^2 * var_Y) + (2 * 2 * -2 * cov_XY)
 var_2X_minus_2Y
 
 # X and Y have the joint distribution below. Find Cor(X,Y).
-# x = 1,4,5,8
-# y = 10,2,6,3
-# P(X=x,Y=y) = 0.1,0.4,0.3,0.2
+# x = 1,4,5,8.....y = 10,2,6,3.....P(X=x,Y=y) = 0.1,0.4,0.3,0.2
 x <- c(1, 4, 5, 8)
 y <- c(10, 2, 6, 3)
 p <- c(0.1, 0.4, 0.3, 0.2)
@@ -602,14 +582,7 @@ model <- lm(y ~ x)
 u_hat <- residuals(model)
 sum(x * u_hat)
 
-# For the sample x=(1,4,9,10,12,14), y=(15,14,7,7,13,13), regress y on x by OLS. 
-# Compute sum from i=1 to 6 of xi uhati where uhati are the OLS residuals.
-x <- c(1, 4, 9, 10, 12, 14)
-y <- c(15, 14, 7, 7, 13, 13)
-model <- lm(y ~ x)
-u_hat <- residuals(model)
-sum(x * u_hat)
-
+# THIS IS 0
 # For the sample x=(1,4,9,10,12,14), y=(15,14,7,7,13,13), regress y on x by OLS. 
 # Compute sum from i=1 to 6 of xi uhati where uhati are the OLS residuals.
 x <- c(1, 4, 9, 10, 12, 14)
@@ -633,7 +606,6 @@ mean(ceosal1$roe)
 cor(ceosal1$salary,ceosal1$roe)
 # Data: (wage1=average hourly earnings in dollars; tenure=years with the current employer). 
 # Run the OLS regression of wage on tenure. What is the OLS slope?
-# Load the dataset and fit the OLS regression of wage on tenure
 model <- lm(wage ~ tenure, data = wage1)
 coef(model)["tenure"]
 
@@ -651,7 +623,8 @@ coef(model)["tenure"] * (9 - 0)
 model <- lm(wage ~ tenure, data = wage1)
 summary(model)$r.squared * 100
 
-# Using the OLS regression of wage on tenure, what is the OLS residual of the worker in the second row of wage1?
+# Using the OLS regression of wage on tenure, 
+# what is the OLS residual of the worker in the second row of wage1?
 model <- lm(wage ~ tenure, data = wage1)
 residuals(model)[2]
 
@@ -662,7 +635,6 @@ sum((fitted(model) - mean(bwght$bwght))^2)
 
 # Using the OLS regression of birth weight on family income, by how many ounces
 # does predicted birth weight change when family income rises by 6, that is, by $6,000?
-# Load the dataset and fit the OLS regression of birth weight on family income (faminc)
 model <- lm(bwght ~ faminc, data = bwght)
 coef(model)["faminc"] * 6
 
